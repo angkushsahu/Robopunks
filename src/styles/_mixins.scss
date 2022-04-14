@@ -1,0 +1,8 @@
+$navbar_height: 4.5rem;
+
+@mixin flex($jc: center, $ai: center, $g: 0) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $g;
+}

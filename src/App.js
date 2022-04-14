@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.scss';
+import MainMint from './MainMint.jsx';
+import Navbar from './Navbar.jsx';
 
-function App() {
+import { useState } from "react";
+
+export default function App() {
+
+  const [accounts, setAccounts] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="overlay">
+      <section className="App">
+        <Navbar accounts={accounts} setAccounts={setAccounts} />
+        <MainMint accounts={accounts} setAccounts={setAccounts} />
+      </section>
+      <div className="movingBackground"></div>
+    </main>
   );
 }
-
-export default App;

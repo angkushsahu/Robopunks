@@ -1,0 +1,41 @@
+@import "mixins";
+
+.mainMint {
+    height: calc(100vh - $navbar_height);
+    @include flex(center, center, 4em);
+    flex-direction: column;
+    line-height: 180%;
+    text-align: center;
+
+    * {
+        max-width: 45ch;
+        text-shadow: 0 2px 2px #000;
+    }
+
+    .inputContainer {
+        margin-bottom: 2em;
+
+        input {
+            padding: 0.3em 0;
+            text-shadow: none;
+            font-weight: 600;
+            font-size: 1.4rem;
+            // line-height: 180%;
+            text-align: center;
+        }
+    }
+
+    button {
+        cursor: pointer;
+        color: #fff;
+        background-color: #d65170;
+        border-radius: 5px;
+        box-shadow: 0 2px 2px 1px #0f0f0f;
+        font-family: inherit;
+        padding: 1em;
+
+        &:hover {
+            background-color: #993f54;
+        }
+    }
+}

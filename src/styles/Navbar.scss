@@ -1,0 +1,32 @@
+@import "mixins";
+
+.header {
+    padding: 0 2em;
+    @include flex(space-between);
+    height: $navbar_height;
+
+    .iconContainer {
+        @include flex(space-evenly, center, 3em);
+    }
+    .navigation {
+        @include flex(space-evenly, center, 3em);
+
+        div {
+            cursor: pointer;
+        }
+
+        button {
+            cursor: pointer;
+            color: #fff;
+            background-color: #d65170;
+            border-radius: 5px;
+            box-shadow: 0 2px 2px 1px #0f0f0f;
+            font-family: inherit;
+            padding: 1em;
+
+            &:hover {
+                background-color: #993f54;
+            }
+        }
+    }
+}
